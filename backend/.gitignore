@@ -1,0 +1,17 @@
+# FastF1 cache
+.fastf1-cache/
+
+# Precomputed session cache
+computed_data/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+download_logos.py

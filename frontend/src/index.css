@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── F1 brand ──────────────────────── */
+  --color-f1red: #E10600;
+
+  /* ── Pitwall (dark UI surfaces) ───── */
+  --color-pitwall-900: #0A0A0F;
+  --color-pitwall-800: #12121A;
+  --color-pitwall-700: #1A1A27;
+  --color-pitwall-border: #1E1E2E;
+
+  /* ── Tyre compounds ────────────────── */
+  --color-tyre-soft: #E8002D;
+  --color-tyre-medium: #FFF200;
+  --color-tyre-hard: #FFFFFF;
+  --color-tyre-inter: #39B54A;
+  --color-tyre-wet: #0067FF;
+
+  /* ── Podium ────────────────────────── */
+  --color-podium-gold: #FFD700;
+  --color-podium-silver: #C0C0C0;
+  --color-podium-bronze: #CD7F32;
+
+  /* ── Misc ──────────────────────────── */
+  --color-fastest: #9B59B6;
+}
+
+/* ── Base reset ──────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--color-pitwall-900);
+  color: #e2e2e2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* ── Animations ──────────────────────── */
+
+.gs-rain-icon {
+  animation: gs-rain-bounce 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes gs-rain-bounce {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(2px); opacity: 0.6; }
+}
+
+/* ── Custom Scrollbars ───────────────── */
+
+.scrollable {
+  scrollbar-width: thin;
+  scrollbar-color: #3A3A4A transparent;
+}
+
+.scrollable::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scrollable::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+  background: #3A3A4A;
+  border-radius: 2px;
+}

@@ -1,19 +1,54 @@
+# ============================================
+# GridSight .gitignore
+# ============================================
+
+# === Python ===
 __pycache__/
 *.pyc
 *.pyo
-.env
-venv/
+*.egg-info/
 .venv/
+venv/
+env/
+
+# === Environment & secrets ===
+.env
+*.log
+
+# === FastF1 raw cache (large, regenerable) ===
 backend/.fastf1-cache/
+
+# === Precomputed session data (large, regenerable) ===
 backend/computed_data/
+
+# === Sim session recordings (large, regenerable) ===
 backend/sim_sessions/
+
+# === Backend assets not for distribution ===
+backend/assets/
+
+# === Scripts not needed to run the project ===
+backend/download_logos.py
+backend/debug_*.py
+backend/test_*.py
+backend/clear_cache.py
+backend/cleanup_cache.py
+backend/gridsight_report.js
+frontend/download_logos.py
+
+# === Node / build artifacts ===
 node_modules/
 frontend/node_modules/
 dist/
 frontend/dist/
+
+# === IDE / OS junk ===
 .idea/
 .vscode/
 *.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 .DS_Store
 Thumbs.db
-*.log
