@@ -410,7 +410,7 @@ export default function App() {
 
   const replaySocket = useReplaySocket(sessionId)
   const simSocket = useLiveSocket(simLiveActive)
-  const simReplay = useSimReplaySocket(simReplayFilename)
+  useSimReplaySocket(simReplayFilename)
   // Live F1 SignalR socket — connects when liveSessionRequested is set
   const liveF1Socket = useLiveF1Socket(liveSessionRequested, liveDelay)
   // Determine which socket is "active" for the dashboard

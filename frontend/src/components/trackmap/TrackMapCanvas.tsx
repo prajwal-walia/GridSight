@@ -1,6 +1,6 @@
 import { useEffect, useRef, useCallback, useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
-import { useDriverStore, type DriverData } from '../../store/driverStore'
+import { useDriverStore } from '../../store/driverStore'
 import { useUIStore, type TrackStatus } from '../../store/uiStore'
 import { useReplayStore } from '../../store/replayStore'
 import LiveTelemetryStrip from '../telemetry/LiveTelemetryStrip'

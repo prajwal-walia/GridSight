@@ -54,9 +54,9 @@ interface LiveDriver {
   team: string
   gapToLeader: string | null
   interval: string | null
-  sector1?: boolean | null
-  sector2?: boolean | null
-  sector3?: boolean | null
+  sector1?: number | null
+  sector2?: number | null
+  sector3?: number | null
   sector1Color?: string | null
   sector2Color?: string | null
   sector3Color?: string | null
@@ -124,7 +124,7 @@ export function useLiveF1Socket(
 
   // ── store accessors (non-reactive for perf) ────────────────────────
   const setDrivers = useDriverStore.getState().setDrivers
-  const getDrivers = () => useDriverStore.getState().drivers
+
 
   // ── parse gap helper ────────────────────────────────────────────────
   const parseGap = (gap: string | null | number): number | null => {

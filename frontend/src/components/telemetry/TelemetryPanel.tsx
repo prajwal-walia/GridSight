@@ -6,7 +6,7 @@ import {
 import { useDriverStore } from '../../store/driverStore'
 import { useReplayStore } from '../../store/replayStore'
 import { useBreakpoint } from '../../hooks/useBreakpoint'
-import { useLiveTelemetry, type TelemetryPoint } from '../../hooks/useLiveTelemetry'
+import { useLiveTelemetry } from '../../hooks/useLiveTelemetry'
 
 /* ── types ────────────────────────────────────────────────────────────── */
 

@@ -1,4 +1,5 @@
 # GridSight 🏎️
+![CI](https://github.com/prajwal-walia/GridSight/actions/workflows/ci.yml/badge.svg)
 
 **Professional F1 Telemetry Dashboard** — A real-time pit wall experience
 for F1 fans and sim racers. Replay any session from 2022–2026, connect
@@ -103,6 +104,25 @@ npm run dev
 ```
 
 Open **http://localhost:5173**
+
+---
+
+## 🐳 Docker Setup
+
+```bash
+# Build and start all services
+docker-compose up --build
+
+# Run in background
+docker-compose up -d --build
+
+# Stop
+docker-compose down
+```
+
+Access at **http://localhost:5173**
+
+> **Note:** F1 25 UDP packets are forwarded on port 20777/udp automatically.
 
 ---
 

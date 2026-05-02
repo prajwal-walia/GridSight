@@ -1,0 +1,26 @@
+
+services:
+  backend:
+    build: ./backend
+    container_name: gridsight-backend
+    ports:
+      - "8000:8000"
+      - "20777:20777/udp"
+    volumes:
+      - ./backend/.fastf1-cache:/app/.fastf1-cache
+      - ./backend/computed_data:/app/computed_data
+      - ./backend/sim_sessions:/app/sim_sessions
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    container_name: gridsight-frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    environment:
+      - VITE_API_URL=http://backend:8000
+    restart: unless-stopped

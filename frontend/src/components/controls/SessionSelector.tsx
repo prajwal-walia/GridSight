@@ -52,7 +52,7 @@ export default function SessionSelector({ onSessionSelected, onLiveSelected, onS
 
   const [liveRealStatus, setLiveRealStatus] = useState<any>(null)
   const [networkInfo, setNetworkInfo] = useState<{ ips: string[], port: number } | null>(null)
-  const [f125Connected, setF125Connected] = useState(false)
+  const [f125Connected] = useState(false)
   const [savedSessions, setSavedSessions] = useState<SimSession[]>([])
   const [loadingSessions, setLoadingSessions] = useState(false)
   const [liveDelay, setLiveDelay] = useState(0)

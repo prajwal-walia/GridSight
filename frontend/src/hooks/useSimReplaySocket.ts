@@ -165,6 +165,7 @@ export function useSimReplaySocket(filename: string | null) {
               teamColor: d.teamColor || '#E10600',
               team: d.team || 'Player',
               fullName: d.fullName || d.code,
+              code: d.code,
               isOut: d.isOut,
               isDRS: d.drs,
               fastestLap: d.fastestLap,

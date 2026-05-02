@@ -1,0 +1,7 @@
+.fastf1-cache/
+computed_data/
+sim_sessions/
+__pycache__/
+*.pyc
+.env
+*.log

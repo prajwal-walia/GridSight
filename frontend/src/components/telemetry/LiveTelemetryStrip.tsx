@@ -50,7 +50,7 @@ export default function LiveTelemetryStrip() {
     d2Code = p2 || ''
   }
 
-  const dsToShow = [d1Code, d2Code].filter(Boolean).map(c => ({ code: c, ...drivers[c] }))
+  const dsToShow = [d1Code, d2Code].filter(Boolean).map(c => ({ ...drivers[c], code: c }))
 
   if (!visible) {
     return (
